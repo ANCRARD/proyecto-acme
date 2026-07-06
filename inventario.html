@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planta Macondo - Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Planta Macondo - Control de Inventario</h1>
+        <nav style="margin-top: 10px;">
+            <a href="inventario.html" style="color: white; margin-right: 15px;">Inventario</a>
+            <a href="produccion.html" style="color: white; margin-right: 15px;">Producción</a>
+            <button id="btn-cerrar-sesion" style="background-color: #e74c3c; padding: 0.5rem; font-size: 0.9rem;">Cerrar Sesión</button>
+        </nav>
+    </header>
+
+    <main id="contenedor-inventario">
+        <section>
+            <h2>Crear Nuevo Producto</h2>
+            <form id="formulario-inventario">
+                <label for="producto-codigo">Código del Producto (ID):</label>
+                <input type="text" id="producto-codigo" required>
+
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input type="text" id="nombreProducto" required>
+
+                <label for="tipoProducto">Tipo de Producto:</label>
+                <select id="tipoProducto" required>
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="materiaPrima">Materia Prima</option>
+                    <option value="productoTerminado">Producto Terminado</option>
+                </select>
+
+                <div id="campo-dinamico"></div>
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>
+
+        <hr style="margin: 2rem 0;">
+
+        <section>
+            <h2>Aumentar Stock (Entrada de Inventario)</h2>
+            <form id="formulario-stock">
+                <label for="select-producto-stock">Seleccionar Producto/Materia Prima:</label>
+                <select id="select-producto-stock" required></select>
+                
+                <label for="cantidad-stock">Cantidad a ingresar:</label>
+                <input type="number" id="cantidad-stock" min="1" required>
+                
+                <button type="submit">Aumentar Saldo</button>
+            </form>
+        </section>
+
+        <hr style="margin: 2rem 0;">
+
+        <section>
+            <h2>Lista de Productos</h2>
+            <input type="text" id="buscador-inventario" placeholder="Buscar por nombre o código..." style="width: 100%; margin-bottom: 1rem;">
+            <ul id="lista-inventario" style="list-style-type: none; padding: 0;"></ul>
+        </section>
+    </main>
+
+    <script src="inventario.js"></script>
+</body>
+</html>

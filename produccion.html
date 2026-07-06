@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planta Macondo - Producción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Planta Macondo - Producción</h1>
+        <nav style="margin-top: 10px;">
+            <a href="inventario.html" style="color: white; margin-right: 15px;">Inventario</a>
+            <a href="produccion.html" style="color: white; margin-right: 15px;">Producción</a>
+            <button id="btn-cerrar-sesion" style="background-color: #e74c3c; padding: 0.5rem; font-size: 0.9rem;">Cerrar Sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Generar Orden de Producción</h2>
+            <form id="formulario-produccion">
+                <label for="select-producto-producir">Seleccionar Producto a Fabricar:</label>
+                <select id="select-producto-producir" required></select>
+                
+                <label for="cantidad-producir">Cantidad a Fabricar:</label>
+                <input type="number" id="cantidad-producir" min="1" required>
+                
+                <button type="submit">Iniciar Producción</button>
+            </form>
+        </section>
+
+        <hr style="margin: 2rem 0;">
+
+        <section id="resumen-produccion" style="display: none; background: #e8f8f5; padding: 1rem; border-radius: 5px;">
+            <h3>Resumen de la Producción</h3>
+            <p><strong>Orden #</strong> <span id="orden-consecutivo"></span></p>
+            <p><strong>Producto Fabricado:</strong> <span id="resumen-producto"></span></p>
+            <p><strong>Cantidad Fabricada:</strong> <span id="resumen-cantidad"></span></p>
+            <p><strong>Materia Prima Usada:</strong> <span id="resumen-mp"></span></p>
+        </section>
+    </main>
+
+    <script src="produccion.js"></script>
+</body>
+</html>
