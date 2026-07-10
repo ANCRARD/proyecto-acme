@@ -220,6 +220,38 @@ hr {
     color: var(--muted);
 }
 
+.reporte-productos {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.item-reporte-producto {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.95rem 1rem;
+}
+
+.item-reporte-producto h3 {
+    margin: 0 0 0.4rem;
+    color: var(--primary-dark);
+}
+
+.item-reporte-producto p {
+    margin: 0.3rem 0;
+    color: var(--muted);
+}
+
+.item-reporte-producto ul {
+    margin: 0.35rem 0 0 1.15rem;
+    padding: 0;
+}
+
+.item-reporte-producto li {
+    margin-bottom: 0.25rem;
+}
+
 @media (max-width: 700px) {
     main {
         width: min(96%, 100%);

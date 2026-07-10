@@ -43,6 +43,17 @@
             <p><strong>Cantidad Fabricada:</strong> <span id="resumen-cantidad"></span></p>
             <p><strong>Materia Prima Usada:</strong> <span id="resumen-mp"></span></p>
         </section>
+
+        <hr style="margin: 2rem 0;">
+
+        <section>
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <h2>Reporte de los 5 productos más fabricados</h2>
+                <button type="button" id="btn-generar-reporte">Generar reporte</button>
+            </div>
+            <div id="reporte-top-productos" class="reporte-productos"></div>
+        </section>
     </main>
 
     <script src="produccion.js"></script>
